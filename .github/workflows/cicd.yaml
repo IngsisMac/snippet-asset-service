@@ -2,7 +2,7 @@ name: Publish Image
 
 on:
   push:
-    branches: [main, test/*]
+    branches: [main, dev]
 
 jobs:
   publish:
@@ -59,3 +59,4 @@ jobs:
           tags: |
             ghcr.io/ingsismac/snippet-asset-service:latest
             ghcr.io/ingsismac/snippet-asset-service:${{ steps.tag-branch-name.outputs.tag }}
+            ${{ github.ref_name == 'dev' && 'ghcr.io/ingsismac/snippet-asset-service:dev' || '' }}
