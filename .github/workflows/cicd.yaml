@@ -57,5 +57,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/snippet-asset-service:latest
-            ghcr.io/${{ github.repository_owner }}/snippet-asset-service:${{ steps.tag-branch-name.outputs.tag }}
+            ghcr.io/ingsismac/snippet-asset-service:latest
+            ghcr.io/ingsismac/snippet-asset-service:${{ steps.tag-branch-name.outputs.tag }}
