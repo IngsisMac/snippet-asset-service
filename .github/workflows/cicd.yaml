@@ -32,13 +32,6 @@ jobs:
         run: ./gradlew bootJar -x test
         shell: bash
 
-      - name: Setup Image Name for Env
-        id: image-env-name
-        uses: ./.github/actions/image-env-name
-        with:
-          base-image-name: snippet-asset-service
-          main-branch-name: "main"
-
       - name: Setup Branch Name for Tag
         id: tag-branch-name
         uses: ./.github/actions/tag-branch-name
